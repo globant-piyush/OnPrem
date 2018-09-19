@@ -1,0 +1,13 @@
+{
+    "credentials" :{
+      "username" : "development",
+      "password" : "myD3v3l0pm3ntP4ssw0rd!"
+    },    
+    "organisation" :{
+        "sitename" : "Bare Escentuals",
+        "propertyName" : "Florida Mall",
+        "northFace" : "North Face",
+        "sanFrancisco" : "San Francisco",
+        "chicago" : "Chicago"
+      }
+}
