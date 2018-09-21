@@ -1,17 +1,21 @@
 
 const loginPage = require('../../operations/LoginOperations.js');
-const homePage = require('../operations/homePageOperation.js');
-const dataValues = require('../resources/ON167.json');
-var env = require( '../../env.js');
+const homePage = require('../../operations/homePageOperation.js');
+const dataValues = require('../../resources/ON167.json');
+var env = require( '../../../env.js');
 
 describe('Validate that User can see data in right format from Traffic Table (Story # ON167)', function(){
 
+    beforeAll(function(){loginPage.openBrowser(env.baseUrl);})
     afterEach(function () {
         browser.getAllWindowHandles().then(function (handles) {
             if(handles.length>0){
-                browser.get(env.baseUrl+"1");
+                
+                
+                browser.get(env.baseUrl+"8706");
             }
             else{
+                console.log(env.baseUrl);
 
                 loginPage.openBrowser(env.baseUrl);
  

@@ -8,7 +8,5 @@
       "user": "userName",
       "password": "password"
     }
-  },
-
-  "baseUrl":"http://ugl-onprem11.rctanalytics.com/"
+  }
 }

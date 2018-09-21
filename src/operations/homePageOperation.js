@@ -105,12 +105,15 @@ var homePage = function(){
         return (homePageComponent.noOfRowsInRealData.length());
     }    
 
-    this.getTrafficDropDownBtn = function(){
-        return (homePageComponent.trafficDropDown);
+    this.getTrafficDropDownBtn = function(){        
+        return (homePageComponent.trafficDropDown.get(1));
+    }
+    this.getPeriodChart = function(){
+        return (homePageComponent.selectedPeriodChart);        
     }
 
     this.clickTrafficDropDown = function(){        
-        this.getTrafficDropDownBtn().click().then(function(){
+        homePageComponent.trafficDropDown.get(1).click().then(function(){
             console.log("Inside Traffic click Promise");
 
         });

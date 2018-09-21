@@ -1,11 +1,22 @@
 
-// import mongoose from 'mongoose';
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://tgl-onprem11.rctanalytics.com:27017');
+
+
+var dataProvider = function(){
+
+  var result;
+
+mongoose.connect('mongodb://tgl-onprem11.rctanalytics.com/identity');
 
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
-  console.log("we are connected");
+  console.log("we are connected"); 
+  
+
 });
+db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+}
+
+module.exports = new dataProvider();

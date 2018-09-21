@@ -3,9 +3,11 @@ var loginData = require('../resources/LoginData.json')
 
 var loginPage = function(){
 
-    this.openBrowser = function(){
+    this.openBrowser = function(url){
         browser.driver.manage().window().maximize();
-        browser.get(loginData.baseUrl);  
+        console.log("Inside Login Opeation :"+url);
+        
+        browser.get(url);  
     };
             
         this.enterLogin = function(username, password){

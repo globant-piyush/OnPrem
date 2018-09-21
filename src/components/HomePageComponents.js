@@ -18,7 +18,9 @@ var homePageComponent = function() {
   this.tableHeaderRealTime =  element.all(by.css(' [ref="eText"]'));
   this.realTimeDropDown = element.all(by.xpath("//li[contains(@ng-repeat,'vm.items')]"));
   this.noOfRowsInRealData = element.all(by.css("div.ag-body-container[role='presentation'] [role='row']"));
-  this.trafficDropDown = element(by.css('.line-high-chart-widget span.dropdown button.btn.btn-default.btn-xs.dropdown-toggle'));
+  this.trafficDropDown = element.all(by.css('.btn.btn-default.btn-xs.dropdown-toggle'));
+  this.selectedPeriodChart = element(by.css('.line-high-chart-widget-summary-container'));
+
   this.optionOnTraffic = element(by.css('.dropdown.kpi-dropdown.btn-group.open .dropdown-menu li a'));
   this.allOptionsOnTraffic = element.all(by.css('.dropdown.kpi-dropdown.btn-group.open .dropdown-menu li a'));
   this.summaryContainer = element.all(by.css('.line-high-chart-widget-summary-container div.value.no-details span'));
